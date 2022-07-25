@@ -185,7 +185,7 @@ class LcdApi:
         # Sleep for some time (given in microseconds)
         time.sleep_us(usecs)
         
-    def write_line(string,number):
+    def write_line(self,string,number):
         #writes a defined line to the LCD
-        lcd.move_to(0,number)
-        lcd.putstr(string)
+        self.move_to(0,number)
+        self.putstr(string)
