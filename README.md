@@ -49,4 +49,5 @@ These are the python commands used in a program! (They can all be found in the l
 - lcd.clear()                                       - Clear all chars or anything written to the display
 - lcd.move_to(Col, Row)                             - Move to position based on row and col values (Y, X)
 - lcd.custom_char(Num, bytearray([HEX chars])))     - Num can be any integer 0 - 8 (Writing to CGRAM locations) merely used for numbering. The HEX chars are simply made by using this link: https://maxpromer.github.io/LCD-Character-Creator/. It will provide a string of Hex charecters which can replace the "HEX chars" in the example command.
+- lcd.write_line(String, Linie)                     - Writes a string to a defines line
 
