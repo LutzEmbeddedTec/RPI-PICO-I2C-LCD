@@ -7,15 +7,11 @@ Project: Check it out for a full step-by-setp guide on Instructables: https://ww
 
 This is code adaptded for micropython and the Raspberry Pi PICO specifically.
 
-Usage: 
-- Download all 3 .py files included. 
-- Open Thonny IDE with the 3 files
-- Make pin edits or setup changes (See below for options) 
-- DO NOT EDIT FILE NAMES!
-- In Thonny, go to top menu File => Save Copy => Raspberry Pi Pico and save each file to the board with the same name as downloaded and with a .PY extension when saving it to the board. 
-- Switch to the pico_i2c_lcd_test.py (this is the main file) and click run. This should be able to initalize the LCD display if settings are right.
-- If you get errors, see below for a known list of errors and their fixes
-- Wiring Diagram LCD_bb.jpg! Please look here for a fritzing diagram!
+# detailed explanation in the video
+
+- copy files to raspberry pico
+- run main.scan.py and read I2C Adress
+- run pico_i2c_lcd_test.py
 
 Requirements:
 - 3.3 - 5V level translator. This is crucial to encure the lcd recieves the commands properly. I recommend this: https://www.adafruit.com/product/757 (Must be Bi-Directional)
@@ -32,11 +28,6 @@ scl=machine.Pin(1)
 i2c=machine.I2C(0,sda=sda, scl=scl, freq=400000)
 print(i2c.scan())
 ```
-
-- Once you get an address through the console (REPL), this will be in decimal and not hex. You can convert the decimal to hex or simply put a decimal address in the setup.
-in my case, the decimal addr. was 39 which converts to 0x27 in hex.
-- Ensure that your SCL and SDA pins are selected properly in accordance with the Pico's pin table. These connect to the low voltage side of the translator with a 3.3V Reference from the board. The high voltage side gets a 5V reference from the VBUS pin of the Pico.
-- Finally, assure the I2C_NUM_ROWS and I2C_NUM_COLS are set properly!
 
 Functions / Usage: 
 
