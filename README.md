@@ -17,18 +17,6 @@ Requirements:
 - 3.3 - 5V level translator. This is crucial to encure the lcd recieves the commands properly. I recommend this: https://www.adafruit.com/product/757 (Must be Bi-Directional)
 - PCF8574 I2C LCD backpack. (These are common to find)
 
-Setup Changes:
-- Make sure the top address is set correctly!
-Use this small program to scan for I2C devices:
-
-```python
-import machine
-sda=machine.Pin(0)
-scl=machine.Pin(1)
-i2c=machine.I2C(0,sda=sda, scl=scl, freq=400000)
-print(i2c.scan())
-```
-
 Functions / Usage: 
 
 These are the python commands used in a program! (They can all be found in the lcd_api.py file with definitions to their functions)
