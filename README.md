@@ -7,7 +7,7 @@ Project: Check it out for a full step-by-setp guide on Instructables: https://ww
 
 This is code adaptded for micropython and the Raspberry Pi PICO specifically.
 
-# detailed explanation in the video
+# Detailed explanation in the video
 
 - copy files to raspberry pico
 - run main.scan.py and read I2C Adress
