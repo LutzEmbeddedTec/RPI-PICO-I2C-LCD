@@ -15,6 +15,7 @@ This is code adaptded for micropython and the Raspberry Pi PICO specifically.
 
 Requirements:
 - 3.3 - 5V level translator. This is crucial to encure the lcd recieves the commands properly. I recommend this: https://www.adafruit.com/product/757 (Must be Bi-Directional)
+- or use 2k2 Ohm resistor in SDA, SCL line. But without warranty.
 - PCF8574 I2C LCD backpack. (These are common to find)
 
 Functions / Usage: 
